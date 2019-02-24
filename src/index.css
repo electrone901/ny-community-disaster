@@ -59,3 +59,28 @@ body {
 .details {
   margin-top: -14px;
 }
+
+.back {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 656px;
+  background-position: center;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 100%;
+    /* margin-top: -25px; */
+  }
+}
+.mb-4, .my-4 {
+  margin-bottom: 0rem!important;
+}
+
+.display-4 {
+  padding-top: 20%;
+  color: white;
+  text-align: left;
+}
