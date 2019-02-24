@@ -10,19 +10,20 @@ class ResultSearch extends Component {
     }
 
     componentDidMount() {
-        let location  = this.state.location;
-        let url = "";
-        fetch(url + location)
-        .then(res => {
-            return res.json();
-        })
-        .then((data) => {
-            console.log('data coming', data)
-            // this.setState({data: data.foods});
-        })
-        .catch((err) => {
-            console.log('There was a problem with your fetch request' + err.message)
-        });
+        let location  = this.params.match.location ;
+        console.log('location',location)
+        let url = "https://communityserver.herokuapp.com/locations/id";
+        // fetch(url + location)
+        // .then(res => {
+        //     return res.json();
+        // })
+        // .then((data) => {
+        //     console.log('data coming', data)
+        //     // this.setState({data: data.foods});
+        // })
+        // .catch((err) => {
+        //     console.log('There was a problem with your fetch request' + err.message)
+        // });
     }
 
     onChange = (e) => {
