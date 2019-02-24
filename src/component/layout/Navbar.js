@@ -1,23 +1,15 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { connect } from 'react-redux';
-
-import { logoutUser } from '../../actions/authActions';
 
 class Navbar extends Component {
-  onLogoutClick(e){
-      e.preventDefault();
-      this.props.logoutUser();
-  }
   
   render() {
-    const {isAuthenticated, user} = this.props.auth;
     
     return (
-      <nav className="navbar navbar-expand-sm navbar-dark bg-dark mb-4">
+      <nav className="navbar navbar-expand-sm navbar-light bg-light mb-4">
         <div className="container">
           <Link className="navbar-brand" to="/">
-            My Community
+            Seven Dot Two
           </Link>
           <button
             className="navbar-toggler"
@@ -48,8 +40,4 @@ class Navbar extends Component {
   }
 }
 
-const mapStateToProps = (state) => ({
-  auth: state.auth
-});
-
-export default connect(mapStateToProps, {logoutUser})(Navbar);
+export default (Navbar);
