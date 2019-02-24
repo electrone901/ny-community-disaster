@@ -12,8 +12,6 @@ import Profile from './component/community/Profile';
 import Register from './component/auth/Register';
 import Login from './component/auth/Login';
 
-
-
 class App extends Component {
   render() {
     return (
